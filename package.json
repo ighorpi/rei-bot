@@ -2,7 +2,7 @@
   "name": "rei01",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node .",
     "test": "node ."
@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "caminte": "^0.4.1",
     "discord.js": "^12.5.3",
     "dotenv": "^8.2.0",
-    "env": "^0.0.2"
+    "env": "^0.0.2",
+    "mongoose": "^5.12.4"
   }
 }

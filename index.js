@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 require('dotenv').config()
+require('./src/config/models').init
 
 client.on('ready', () => {
     console.log('back online again')
