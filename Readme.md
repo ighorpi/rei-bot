@@ -17,4 +17,17 @@ Para a boa execução das funcionalidades, é necessário
 
     O Resultado deve ser o retorno de Uma moeda do rei (moeda do servidor), que ficará salvo no banco de dados da API do bot. Você pode trabalhar uma vez por dia, ganhando uma moeda por trabalho.
 
+## Rodando na sua máquina
+* NodeJS e NPM são pré-requisitos. instale em sua máquina.
+
+1. Entre na raíz do projeto e instale as dependências  
+    `npm install`
+
+1. Preencha seu arquivo _.env_ como no _.env.example_.
+    * TOKEN - Variável de ambiente que guardará o token do discord.
+
+1. Inicie o servidor com  
+    `node .`
+
+Pronto, o bot está rodando. Agora basta usá-lo em seu servidor.
 
