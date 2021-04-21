@@ -14,7 +14,7 @@ const userSchema = Schema({
     userBalance: { type: Number, default: 0 },
     isLogged: { type: Boolean , default: true },
     joinedAt:   { type: Date,    default: Date.now },
-    level: { type: Number, default: 0 }
+    level: { type: Number, default: 1 }
 })
 
 
