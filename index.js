@@ -1,7 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const mongoose = require('mongoose');
 require('dotenv').config()
 require('./src/config/models').init
+
+const User = mongoose.model('User');
 
 client.on('ready', () => {
     console.log('back online again')
@@ -34,12 +37,20 @@ client.on('message', msg => {
                 break;
             default:
                 msg.channel.send('nao implementado')
-                break;
-            
-        }
-        
+                break;            
+        }        
     }
 })
+
+client.on('guildMemberAdd', (member) => {
+    // Cria usuario ao entrar no Server
+    // ToDo -> Tratar usuário que saiu do server e entrou de novo
+    User.create({
+        userId: member.id,
+    })
+    .then((value) => console.log(value))
+    .catch((e)=> console.log(e))
+});
 
 client.login(process.env.TOKEN)
 
